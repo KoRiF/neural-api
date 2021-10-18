@@ -89,9 +89,11 @@ uses
 
 const
   csMaxInterleavedSize: integer = 95;
+  csNNetMaxParameterIdx = 7;
 
 type
   TNNet = class;
+
   { TNNetNeuron }
   TNNetNeuron = class (TMObject)
     protected
@@ -146,10 +148,14 @@ type
       procedure InitForDebug();
   end;
 
-  const
-    csNNetMaxParameterIdx = 7;
 
-  type
+
+
+
+
+
+
+
   /// neural network layer
   TNNetLayer = class(TMObject)
     protected
