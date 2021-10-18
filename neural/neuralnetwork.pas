@@ -632,8 +632,8 @@ type
       FLayerWithChannels, FLayerMul: TNNetLayer;
       procedure SetPrevLayer(pPrevLayer: TNNetLayer); override;
     public
-      constructor Create(LayerWithChannels, LayerMul: TNNetLayer);
-      constructor Create(LayerWithChannelsIdx, LayerMulIdx: integer);
+      constructor Create(LayerWithChannels, LayerMul: TNNetLayer);    overload;
+      constructor Create(LayerWithChannelsIdx, LayerMulIdx: integer);  overload;
       procedure Compute(); override;
       procedure Backpropagate(); override;
   end;
@@ -646,8 +646,8 @@ type
       FLayerA, FLayerB: TNNetLayer;
       procedure SetPrevLayer(pPrevLayer: TNNetLayer); override;
     public
-      constructor Create(LayerA, LayerB: TNNetLayer);
-      constructor Create(LayerAIdx, LayerBIdx: integer);
+      constructor Create(LayerA, LayerB: TNNetLayer);    overload;
+      constructor Create(LayerAIdx, LayerBIdx: integer); overload;
       procedure Compute(); override;
       procedure Backpropagate(); override;
   end;
